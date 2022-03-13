@@ -1,8 +1,16 @@
 function repeatStringNumTimes(str, num) {
+  let total = [];
   do {
-    num--
-    console.log(str)
-  } while(num > 0)
+    if (num > 0) {
+      num--
+    } else {
+      return str = ''
+    }
+    total.push(str)
+  } while(num !== 0)
+  return console.log(total.toString().split(',').join(''))
 }
 
-repeatStringNumTimes("abc", 5);
+repeatStringNumTimes("abc", 3);
+repeatStringNumTimes("*", 3)
+repeatStringNumTimes("abc", -2)
